@@ -1,0 +1,196 @@
+*{
+	margin: 0;
+	padding: 0;
+	/* 盒子模型设定
+	 content-box: 当内容的大小是	固定的情况下，那么用content-box，好处是内容的大小宽，高不会改变
+	 border-box：当希望整个页面大小是固定的，不会因为设置了内边距padding和border而撑开大小。
+	 */
+	box-sizing: border-box;
+}
+
+body{
+	background-color: rgb(245,245,245);
+}
+.header {
+	width: 375px;
+	height: 74px;
+	background-color: #f2f2f2;
+	display: flex;
+	flex-direction: column;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	box-shadow: 0 2px 4px -1px rgb(0 0 0 / 20%);
+}
+
+.headerTop{
+	width: 375px;
+	height: 44px;
+	display: flex;
+	align-items: center;
+	position: relative;
+	z-index: 100;
+	background-color: #f2f2f2;
+}
+.logo{
+	width: 52px;
+	height: 18.44px;
+	background-image: url(../img/milogo.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 25px 17px;
+}
+.search {
+	flex: 1;
+	height: 33px;
+	border: 1px solid #e5e5e5;
+	display: flex;
+	background-color: #fff;
+	border-radius: 2px;
+	
+}
+.search .icon {
+	width: 31.25px;
+	height: 31.25px;
+	background-image: url(../img/search.png);
+	
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 20px 20px;
+
+}
+.search input{
+	flex: 1;
+	border: none;
+	font-size: 15.6px;
+	background: transparent;
+	opacity: 0.6;
+	outline: none;
+	/* caret-color: white; */
+	
+}
+
+.user {
+	width: 52px;
+	height: 31.25px;
+	background-image: url(../img/icon-user.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 20px 20px;
+}
+
+.headerNav{
+/* 	width: 375px;
+	height: 30px; */
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex: 1;
+	
+}
+
+.headerNav .xhicon{
+	
+	width: 20px;
+	height: 20px;
+	background-image: url(../img/icon_under.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 20px 20px;
+	position: relative;
+	z-index: 100;
+	transition: transform 0.3s;
+}
+.header .headerNav>a{
+	/* height: 30px; */
+	text-decoration: none;
+	font-size: 14px;
+	color: rgb(116, 116, 116);
+	border-color: rgb(242, 242, 242);
+	align-self: stretch;
+	padding-top: 5px;
+	
+}
+.header .headerNav>a.active{
+	
+	color: rgb(237, 91, 0);
+	border-bottom: 2px solid rgb(237,91,0);
+}
+
+/* 头部导航，下画框样式 */
+.xhk{
+	width: 100vw;
+	height: 0vh;
+	background-color: rgba(0,0,0,0.3);
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	overflow: hidden;
+	
+}
+
+#choose:checked~.xhk{
+	height: 100vh;
+}
+#choose:checked~.xhk .xhkMain{
+	height: 130px;
+}
+#choose:checked~.xhicon{
+	transform: rotate(180deg);
+}
+
+
+.xhkMain{
+	position: absolute;
+	left: 0;
+	top: 44px;
+	width: 375px;
+	/* height: 130px; */
+	height: 0px;
+	background-color: #F2F2F2;
+	display: flex;
+	flex-direction: column;
+	padding-left: 13px;
+
+	transition: height linear 0.15s ;
+	overflow: hidden;
+}
+
+
+.xhkMain .xhkTop{
+	width: 375px;
+	height: 29px;
+	font-size: 14px;
+	display: flex;
+	align-items: flex-end;
+	font-family: Helvetica Neue,Tahoma,Arial,PingFangSC-Regular,Hiragino Sans GB,Microsoft Yahei,sans-serif;
+}
+.xhkMain .xhkList{
+	flex: 1;
+	flex-wrap: wrap;
+	display: flex;
+	margin-top: 17px;
+	
+}
+.xhkMain .xhkList>a{
+	width: 79.16px;
+	height: 29.16px;
+	line-height: 29.16px;
+	text-align: center;
+	border: 1px solid #E5E5E5;
+	border-radius: 4px;
+	background-color: #FFFFFF;
+	margin: 0 10px 10px 0;
+	font-size: 13px;
+	font-family: Helvetica Neue,Tahoma,Arial,PingFangSC-Regular,Hiragino Sans GB,Microsoft Yahei,sans-serif;
+	text-decoration: none;
+	color: #3c3c3c;
+}
+
+.xhkMain .xhkList>a.active{
+	background-color: #fde0d5;
+	border: 1px solid #ff6700;
+	color: #ff6700;
+}

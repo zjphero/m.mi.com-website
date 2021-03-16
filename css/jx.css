@@ -1,0 +1,75 @@
+.jx{
+	margin-top: 8px;
+	width: 375px;
+	display: flex;
+	flex-direction: column;
+	padding-bottom: 54px;
+}
+.jx>.jxad{
+	width: 375px;
+	height: 230px;
+	background-image: url(../img/jx1.webp);
+	background-size: 100% 100%;
+	
+}
+.jx>.pdList{
+	width: 375px;
+	display: flex;
+	flex-wrap: wrap;
+	background-color: white;
+}
+.jx>.pdList>.pdItems{
+	width: 50%;
+	height: 253px;
+	padding: 2px 4px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-family: Helvetica Neue,Tahoma,Arial,PingFangSC-Regular,Hiragino Sans GB,Microsoft Yahei,sans-serif;
+}
+
+.jx>.pdList>.pdItems>img{
+	width: 100%;
+	height: auto;
+}
+.jx>.pdList>.pdItems>.title{
+	
+	margin-top: 10px;
+	font-size: 15px;
+	color: rgba(0,0,0,.87);
+	
+	
+	
+}
+.jx>.pdList>.pdItems>.brief{
+	
+	font-size: 11px;
+	color: rgba(0,0,0,.54);
+	
+	overflow: hidden;
+}
+
+.jx>.pdList>.pdItems>.price{
+
+	font-size: 15px;
+	color: #ea625b;
+	
+}
+
+.jx>.pdList>.pdItems>.price::before{
+	content: "\A5";
+	font-size: .76em;
+	text-decoration: none;
+}
+
+.jx>.pdList>.pdItems>.buyBtn{
+	width: 104px;
+	height: 30px;
+	font-size: 13px;
+	color: #fff;
+	text-align: center;
+	line-height: 30px;
+	background-color: #EA625B;
+	border-radius: 3px;
+	font-weight: 400;
+}

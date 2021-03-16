@@ -1,0 +1,43 @@
+.banner{
+	width: 375px;
+	height: 265px;
+	margin-top: 8px;
+	display: flex;
+	justify-content: space-between;
+	background-color: rgb(245, 245, 245);
+}
+.banner>.lbanner{
+/* 	width: 186px;
+	height: 265px; */
+	
+	background-image: url(../img/img1.webp);
+	background-size: 100% 100%;
+	
+	
+}
+
+.banner>.lbanner, .banner>.rbanner{
+	
+	width: 186px;
+	height: 265px;
+}
+
+.banner>.rbanner{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	
+}
+.banner>.rbanner>.rtbanner{
+	width: 186px;
+	height: 131px;
+
+	background-image: url(../img/img2.webp);
+	background-size: 100% 100%;
+}
+.banner>.rbanner>.rbbannner{
+	width: 186px;
+	height: 131px;
+	background-image: url(../img/img3.webp);
+	background-size: 100% 100%;
+}

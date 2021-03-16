@@ -1,0 +1,90 @@
+.swiper {
+	width: 375px;
+	height: 188px;
+
+	position: relative;
+	margin-top:75px;
+	left: 0;
+}
+.swiper>.bkimg{
+	width: 375px;
+	height: 188px;
+	background-image: url(../img/banner1.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: auto 100%;
+	transition: background-image 0.8s linear;
+
+}
+.swiper>.btn{
+	width: 8px;
+	height: 8px;
+	border-radius: 4px;
+	position: absolute;
+	background-color: white;
+	top: 170px;
+	left: 160px;
+}
+
+.swiper>.btnposition2 {
+	
+	left: 180px;
+	opacity: 0.3;
+}
+.swiper>.btnposition3 {
+
+	left: 200px;
+	opacity: 0.3;
+}
+
+
+#swiper1:checked~.bkimg{
+	background-image: url(../img/banner1.jpg);
+	
+}
+
+#swiper2:checked~.bkimg{
+	background-image: url(../img/banner2.jpg);
+	
+}
+#swiper3:checked~.bkimg{
+	background-image: url(../img/banner3.jpeg);
+	
+}
+#swiper2:checked~.btnposition2{
+
+	opacity: 1;
+	background-color: white;
+}
+#swiper2:checked~.btnposition1{
+	opacity: 0.3;
+}
+
+#swiper3:checked~.btnposition3{
+	opacity: 1;
+	background-color: white;
+}
+
+#swiper3:checked~.btnposition1{
+	opacity: 0.3;
+}
+
+
+/* 专题列表 */
+.iconList{
+	width: 375px;
+	height: 160px;
+	display: flex;
+	flex-wrap: wrap;
+	position: relative;
+	
+}
+
+.iconItem {
+	width: 20%;
+	height: 80px;
+}
+.iconItem>img{
+	width: 100%;
+	height: 100%;
+}

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<!-- content="width=375px 设置所有移动端设置都用一个固定宽度分辨率 -->
+		<meta name="viewport" content="width=375px,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="./css/header.css"/>
+		<link rel="stylesheet" type="text/css" href="css/swiper.css"/>
+		<link rel="stylesheet" type="text/css" href="css/adbanner.css"/>
+		<link rel="stylesheet" type="text/css" href="css/jx.css"/>
+		<link rel="stylesheet" type="text/css" href="css/footer.css"/>
+	</head>
+	<body>
+		
+		<!-- 快捷结构设计 .header>(.headerTop>(.logo+.search>(.icon+input))+.user)+.headerNav>a*6+span.xhicon	 -->
+		
+		<div class="header">
+			<div class="headerTop">
+				<div class="logo"></div>
+				<div class="search">
+					<div class="icon"></div>
+					<input type="text" placeholder="搜索商品名称">
+				</div>
+				<div class="user"></div>
+			</div>
+			<div class="headerNav">
+				<a href="" class="active">推荐</a>
+				<a href="">手机</a>
+				<a href="">智能</a>
+				<a href="">电视</a>
+				<a href="">家电</a>
+				<a href="">笔记本</a>
+				<!-- 下拉图标 -->
+				<input type="checkbox" name="choose" id="choose" value="" hidden="hidden"/>
+				<label for="choose" class="xhicon"></label>
+				<!-- xhk: 这一层是遮罩 -->
+				<div class="xhk">
+					<!-- 下画框的内容	 -->
+					<div class="xhkMain">
+						<div class="xhkTop">
+							全部
+						</div>
+						<div class="xhkList">
+							<a href="" class="active">推荐</a>
+							<a href="">手机</a>
+							<a href="">智能</a>
+							<a href="">电视</a>
+							<a href="">家电</a>
+							<a href="">笔记本</a>
+						</div>
+						
+					</div>
+					
+				</div>
+			</div>
+		</div>
+		
+		
+		<!-- 轮播图 -->
+		<div class="swiper">
+			
+			<input type="radio" name="swiper" id="swiper1" hidden="hidden"></input>
+			<input type="radio" name="swiper" id="swiper2" hidden="hidden"></input>
+			<input type="radio" name="swiper" id="swiper3" hidden="hidden"></input>
+			<label class="btn btnposition1" for="swiper1" ></label>
+			<label class="btn btnposition2" for="swiper2" ></label>
+			<label class="btn btnposition3" for="swiper3" ></label>
+			
+			<div class="bkimg"></div>
+		</div>
+		
+		<!-- 专题列表 .iconList>(a.iconItem>img[src="../img/icon$.png"])*10 -->
+		<div class="iconList">
+			<a href="" class="iconItem"><img src="./img/icon1.png" alt=""></a>
+			<a href="" class="iconItem"><img src="./img/icon2.webp" alt=""></a>
+			<a href="" class="iconItem"><img src="./img/icon3.webp" alt=""></a>
+			<a href="" class="iconItem"><img src="./img/icon4.webp" alt=""></a>
+			<a href="" class="iconItem"><img src="./img/icon5.webp" alt=""></a>
+			<a href="" class="iconItem"><img src="./img/icon6.webp" alt=""></a>
+			<a href="" class="iconItem"><img src="./img/icon7.png" alt=""></a>
+			<a href="" class="iconItem"><img src="./img/icon8.png" alt=""></a>
+			<a href="" class="iconItem"><img src="./img/icon9.webp" alt=""></a>
+			<a href="" class="iconItem"><img src="./img/icon10.png" alt=""></a>
+		</div>
+		
+		
+		<!-- ad banner .banner>.lbanner+.rbanner>.rtbanner+.rbbannner-->
+		
+		<div class="banner">
+			<div class="lbanner"></div>
+			<div class="rbanner">
+				<div class="rtbanner"></div>
+				<div class="rbbannner"></div>
+			</div>
+		</div>
+		
+		
+		<!-- 每日精选 .jx>.jxad+.pdList>.pdItems*4>img[src="./img/jx$.jpg"]+.title+.brief+.price+.buyBtn-->
+		
+		<div class="jx">
+			<div class="jxad"></div>
+			<div class="pdList">
+				<div class="pdItems">
+					<img src="./img/jx1.jpg" alt="">
+					<div class="title">小米10</div>
+					<div class="brief">骁龙865/1亿像素相机</div>
+					<div class="price">3399</div>
+					<div class="buyBtn">立即购买</div>
+				</div>
+				<div class="pdItems">
+					<img src="./img/jx2.jpg" alt="">
+					<div class="title">Note 9 5G</div>
+					<div class="brief">天玑 800U处理器，5000mAh电池，</div>
+					<div class="price">1299</div>
+					<div class="buyBtn">立即购买</div>
+				</div>
+				<div class="pdItems">
+					<img src="./img/jx3.jpg" alt="">
+					<div class="title">Redmi K30 4G</div>
+					<div class="brief">120Hz流速屏，全速热爱</div>
+					<div class="price">1299</div>
+					<div class="buyBtn">立即购买</div>
+				</div>
+				<div class="pdItems">
+					<img src="./img/jx4.jpg" alt="">
+					<div class="title">Note 9 4G</div>
+					<div class="brief">6000mAh长续航</div>
+					<div class="price">999</div>
+					<div class="buyBtn">立即购买</div>
+				</div>
+			</div>
+		</div>
+		
+		
+		<!-- 底部列表 .footer>(.fIcon>(img+span))*4-->
+		
+		<div class="footer">
+			<div class="fIcon"><div class="img"></div><span>首页</span></div>
+			<div class="fIcon"><div class="img"></div><span>分类</span></div>
+			<div class="fIcon"><div class="img"></div><span>星球</span></div>
+			<div class="fIcon"><div class="img"></div><span>购物车</span></div>
+			<div class="fIcon"><div class="img"></div><span>我的</span></div>
+		</div>
+	</body>
+</html>
